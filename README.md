@@ -1,4 +1,4 @@
-# BDD Widget Test Helper
+# Flutter BDD
 
 [![CI](https://github.com/lynicis/bdd-widget-test-helper/actions/workflows/ci.yml/badge.svg)](https://github.com/lynicis/bdd-widget-test-helper/actions/workflows/ci.yml)
 [![Visual Studio Marketplace Version](https://vsmarketplacebadges.dev/version/lynicis.bdd-widget-test-helper.svg)](https://marketplace.visualstudio.com/items?itemName=lynicis.bdd-widget-test-helper)
@@ -27,8 +27,8 @@ requests](https://github.com/lynicis/bdd-widget-test-helper/issues) are welcome.
 
 | Editor            | How                                                                                                                       |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| VS Code           | Extensions view → search **BDD Widget Test Helper**, or `code --install-extension bdd-widget-test-helper-<version>.vsix` |
-| VSCodium          | Extensions view (Open VSX is the default registry) → search **BDD Widget Test Helper**                                    |
+| VS Code           | Extensions view → search **Flutter BDD**, or `code --install-extension bdd-widget-test-helper-<version>.vsix`           |
+| VSCodium          | Extensions view (Open VSX is the default registry) → search **Flutter BDD**                                               |
 | Zed               | **Extensions → Install Dev Extension → `zed/`** (after `bun run build:zed`) — see [`zed/README.md`](zed/README.md)         |
 
 The extension activates on `.feature` files and needs no configuration.
@@ -87,8 +87,8 @@ the workspace root), then `build.yaml`
 | `bddWidgetTestHelper.externalSteps`              | `[]`     | Extra `package:` step locations                |
 | `bddWidgetTestHelper.showUnresolvedStepWarnings` | `true`   | Warn on unresolved steps                       |
 
-Commands: **BDD: Create step file** (also the quick-fix) and **BDD: Rebuild
-step index**.
+Commands: **Flutter BDD: Create step file** (also the quick-fix) and
+**Flutter BDD: Rebuild step index**.
 
 ## Gherkin details
 
@@ -105,7 +105,7 @@ step index**.
 Zed has no extension API for diagnostics, go-to-definition or quick-fixes, so
 the same TypeScript core is served over LSP by a bundled zero-dependency Node
 server (`zed/server/server.cjs`). Settings live under
-`lsp.bdd-widget-test.settings` with the same keys as above. Document links do
+`lsp.flutter-bdd.settings` with the same keys as above. Document links do
 not exist in Zed; go-to-definition covers the same navigation. Details:
 [`zed/README.md`](zed/README.md).
 

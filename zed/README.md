@@ -1,4 +1,4 @@
-# bdd-widget-test (Zed extension)
+# Flutter BDD (Zed extension)
 
 Zed extension for Flutter developers practicing A-TDD with the
 [`bdd_widget_test`](https://pub.dev/packages/bdd_widget_test) package: it brings
@@ -43,14 +43,14 @@ The extension is intended for the [Zed extension registry](https://github.com/ze
 
 ## Settings
 
-Zed passes `lsp.bdd-widget-test.settings` straight to the server. The keys are
+Zed passes `lsp.flutter-bdd.settings` straight to the server. The keys are
 the same as the VS Code settings (`bddWidgetTestHelper.*`):
 
 ```jsonc
 // ~/.config/zed/settings.json
 {
   "lsp": {
-    "bdd-widget-test": {
+    "flutter-bdd": {
       "settings": {
         "stepFolderName": "./step",
         "relativeToTestFolder": true,
@@ -67,7 +67,7 @@ To use a custom binary instead of the embedded server:
 ```jsonc
 {
   "lsp": {
-    "bdd-widget-test": {
+    "flutter-bdd": {
       "binary": { "path": "/path/to/server", "arguments": ["--stdio"] },
     },
   },

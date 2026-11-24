@@ -1,13 +1,27 @@
 # Changelog
 
-All notable changes to the **BDD Widget Test Helper** extension are documented
-in this file.
+All notable changes to the **Flutter BDD** (formerly BDD Widget Test Helper)
+extension are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
+
+### Changed
+
+- Rebranded the extension display name to **Flutter BDD** (VS Code `displayName`,
+  configuration title, command category, and toast message prefixes).
+- Refreshed the extension icon (`media/icon.png` and `zed/icon.png`) and set
+  `galleryBanner` to `#111827` (`dark` theme).
+- Renamed the VS Code diagnostic source to `"flutter-bdd"`.
+- Renamed the Zed extension and LSP server to `flutter-bdd`
+  (`zed/extension.toml`, `zed/Cargo.toml`, `[language_servers.flutter-bdd]`,
+  `lsp.flutter-bdd.settings`, and `SERVER_NAME = "flutter-bdd"`).
+- VS Code extension ID (`lynicis.bdd-widget-test-helper`), settings
+  (`bddWidgetTestHelper.*`), and command IDs (`bddWidgetTest.*`) remain
+  unchanged so existing installs, settings, and keybindings keep working.
 
 ## 0.2.2 - 2026-11-14
 

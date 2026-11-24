@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for wanting to improve BDD Widget Test Helper. This is a VS Code /
+Thanks for wanting to improve Flutter BDD. This is a VS Code /
 VSCodium / Zed extension that resolves Gherkin `.feature` steps for Flutter
 projects practising A-TDD with the `bdd_widget_test` pub package.
 
