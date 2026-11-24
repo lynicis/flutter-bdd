@@ -1,5 +1,5 @@
 [package]
-name = "bdd-widget-test"
+name = "flutter-bdd"
 version = "0.2.2"
 edition = "2021"
 license = "MIT"

@@ -41,6 +41,7 @@ interface InitResult {
     textDocumentSync: number;
     codeActionProvider: { codeActionKinds: string[] };
   };
+  serverInfo?: { name: string };
 }
 
 interface LocationResult {
@@ -184,6 +185,7 @@ describe("zed LSP server", () => {
       rootUri: fixturesUri,
       initializationOptions: {},
     });
+    expect(init.serverInfo?.name).toBe("flutter-bdd");
     expect(init.capabilities.definitionProvider).toBe(true);
     expect(init.capabilities.textDocumentSync).toBe(1);
     expect(init.capabilities.codeActionProvider.codeActionKinds).toContain(
@@ -211,7 +213,7 @@ describe("zed LSP server", () => {
       "Step file not found: i_fill_the_form.dart",
     );
     expect(diags[0].severity).toBe(2);
-    expect(diags[0].source).toBe("bdd-widget-test");
+    expect(diags[0].source).toBe("flutter-bdd");
     expect(diags[0].range).toEqual({
       start: { line: 5, character: 8 },
       end: { line: 5, character: 23 },

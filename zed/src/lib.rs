@@ -3,7 +3,7 @@ use std::{env, fs};
 use zed::settings::LspSettings;
 use zed_extension_api::{self as zed, serde_json};
 
-const LANGUAGE_SERVER_ID: &str = "bdd-widget-test";
+const LANGUAGE_SERVER_ID: &str = "flutter-bdd";
 const SERVER_PATH: &str = "server.cjs";
 const SERVER_SOURCE: &str = include_str!("../server/server.cjs");
 
@@ -16,9 +16,9 @@ fn write_server() -> zed::Result<String> {
     Ok(SERVER_PATH.to_string())
 }
 
-struct BddWidgetTestExtension;
+struct FlutterBddExtension;
 
-impl zed::Extension for BddWidgetTestExtension {
+impl zed::Extension for FlutterBddExtension {
     fn new() -> Self {
         Self
     }
@@ -31,7 +31,7 @@ impl zed::Extension for BddWidgetTestExtension {
         let lsp_settings = LspSettings::for_worktree(LANGUAGE_SERVER_ID, worktree).ok();
 
         // 1. Binary explicitly configured in settings
-        //    (`lsp.bdd-widget-test.binary.path`).
+        //    (`lsp.flutter-bdd.binary.path`).
         if let Some(binary) = lsp_settings.as_ref().and_then(|s| s.binary.as_ref()) {
             if let Some(path) = binary.path.clone() {
                 return Ok(zed::Command {
@@ -76,4 +76,4 @@ impl zed::Extension for BddWidgetTestExtension {
     }
 }
 
-zed::register_extension!(BddWidgetTestExtension);
+zed::register_extension!(FlutterBddExtension);

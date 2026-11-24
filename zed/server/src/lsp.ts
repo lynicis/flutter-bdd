@@ -1,4 +1,4 @@
-// bdd-widget-test — zero-dependency Node LSP server for Flutter
+// flutter-bdd — zero-dependency Node LSP server for Flutter
 // bdd_widget_test .feature files. Single file, Node stdio, no external install.
 //
 // Generated entry point for the Zed extension: bundled by `bun run build:zed`
@@ -12,7 +12,7 @@
 //   - textDocument/codeAction          ("Create step file" quick-fix with edit)
 //
 // Configuration comes from workspace/configuration section "bddWidgetTestHelper"
-// (Zed shim: lsp.bdd-widget-test.settings):
+// (Zed shim: lsp.flutter-bdd.settings):
 //   { stepFolderName, relativeToTestFolder, externalSteps, showUnresolvedStepWarnings }
 import * as fs from "fs";
 import * as path from "path";
@@ -27,7 +27,7 @@ import {
   unresolvedSteps,
 } from "../../../src/stepResolver";
 
-const SERVER_NAME = "bdd-widget-test";
+const SERVER_NAME = "flutter-bdd";
 const SECTION = "bddWidgetTestHelper";
 
 interface Settings {

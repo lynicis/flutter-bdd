@@ -2964,7 +2964,7 @@ function unresolvedSteps(text, featurePath, index2) {
 }
 
 // zed/server/src/lsp.ts
-var SERVER_NAME = "bdd-widget-test";
+var SERVER_NAME = "flutter-bdd";
 var SECTION = "bddWidgetTestHelper";
 function asRecord(value) {
   return value !== null && typeof value === "object" ? value : {};
