@@ -64,22 +64,20 @@ export async function createStepFile(
   const document = await vscode.workspace.openTextDocument(documentUri);
   const step = stepAt(document, new vscode.Position(line, 0));
   if (!step) {
-    vscode.window.showWarningMessage(
-      "bdd-widget-test-helper: no step on this line.",
-    );
+    vscode.window.showWarningMessage("Flutter BDD: no step on this line.");
     return;
   }
   const identifier = stepIdentifier(step.text);
   if (identifier === null) {
     vscode.window.showWarningMessage(
-      `bdd-widget-test-helper: step '${step.text.trim()}' produces no valid Dart identifier. Rename the step.`,
+      `Flutter BDD: step '${step.text.trim()}' produces no valid Dart identifier. Rename the step.`,
     );
     return;
   }
   const resolution = resolveStep(step.text, documentUri.fsPath, index);
   if (resolution.kind !== "missing") {
     vscode.window.showInformationMessage(
-      "bdd-widget-test-helper: step file already exists.",
+      "Flutter BDD: step file already exists.",
     );
     return;
   }
@@ -87,7 +85,7 @@ export async function createStepFile(
   if (fs.existsSync(filePath)) {
     index.add(filePath); // heal the stale index so diagnostics clear
     vscode.window.showInformationMessage(
-      "bdd-widget-test-helper: step file already exists.",
+      "Flutter BDD: step file already exists.",
     );
     return;
   }
@@ -102,7 +100,7 @@ export async function createStepFile(
   await vscode.window.showTextDocument(doc);
 }
 
-export const BDD_DIAGNOSTIC_SOURCE = "bdd-widget-test-helper";
+export const BDD_DIAGNOSTIC_SOURCE = "flutter-bdd";
 
 export function diagnosticsFor(
   document: vscode.TextDocument,

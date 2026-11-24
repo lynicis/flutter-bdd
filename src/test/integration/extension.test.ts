@@ -90,7 +90,7 @@ export async function run(): Promise<void> {
       const diags = vscode.languages.getDiagnostics(doc.uri);
       return diags.some(
         (d) =>
-          d.source === "bdd-widget-test-helper" &&
+          d.source === "flutter-bdd" &&
           d.message.includes("i_fill_the_form.dart"),
       );
     }, 8000);
