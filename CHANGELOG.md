@@ -10,19 +10,17 @@ and this project adheres to
 ## Unreleased
 
 ### Changed
-
 - Rebranded the extension display name to **Flutter BDD** (VS Code `displayName`,
-  configuration title, command category, and toast message prefixes).
 - Refreshed the extension icon (`media/icon.png` and `zed/icon.png`) and set
-  `galleryBanner` to `#111827` (`dark` theme).
 - Renamed the VS Code diagnostic source to `"flutter-bdd"`.
 - Renamed the Zed extension and LSP server to `flutter-bdd`
-  (`zed/extension.toml`, `zed/Cargo.toml`, `[language_servers.flutter-bdd]`,
-  `lsp.flutter-bdd.settings`, and `SERVER_NAME = "flutter-bdd"`).
 - VS Code extension ID (`lynicis.bdd-widget-test-helper`), settings
-  (`bddWidgetTestHelper.*`), and command IDs (`bddWidgetTest.*`) remain
-  unchanged so existing installs, settings, and keybindings keep working.
+- README restructured around install, first run, differentiation and resolution; every link is absolute so it survives the Marketplace and Open VSX render
+- Development commands and the project layout moved to `CONTRIBUTING.md`
 
+### Fixed
+- `bun run package:vsix` and the release publish aborted because
+- `bun run package:vsix` and the release publish aborted because `@types/vscode` (1.146.0) was newer than `engines.vscode` (`^1.85.0`); pinned the types to the supported floor
 ## 0.2.2 - 2026-11-14
 
 ### Fixed

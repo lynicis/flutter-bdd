@@ -44,19 +44,32 @@ in a test — extract the pure part instead.
 
 ## Development
 
-See the [Development section of the README](README.md#development) for the
-full command list and project layout. In short:
+Requires Bun 1.4 and Node 26 (the versions CI pins).
 
 ```bash
-bun install
-bun run lint
-bun run check-types
-bun run test:unit        # vitest, plain Node
-bunx tsc --project tsconfig.test.json && node test/runTests.js   # integration, needs a display
+bun install               # bun is the package manager (bun.lock)
+bun run compile           # type-check + esbuild bundle → dist/extension.js
+bun run check-types       # tsc --noEmit only
+bun run lint              # ESLint (TS, JS, JSON, Markdown)
+bun run test:unit         # vitest unit tests (plain Node, no VS Code)
+bun run build:zed         # rebuild zed/server/server.cjs (committed, generated)
+bun run test              # compile + integration tests in a real VS Code window
+bun run package:vsix      # build a .vsix
 ```
 
-`bun run build:zed` must have been run at least once or the `zedServer` unit
-test skips itself.
+Integration tests need a display: `node test/runTests.js` on macOS, or
+`xvfb-run -a node test/runTests.js` on Linux; the first run downloads VS Code
+into `.vscode-test/`. `bun run build:zed` must have been run at least once or
+the `zedServer` unit test skips itself.
+
+| Path                                       | Purpose                                                 |
+| ------------------------------------------ | ------------------------------------------------------- |
+| `src/`                                     | VS Code extension; `extension.ts` is the entry point    |
+| `src/gherkin/dialects.json`                | Bundled Gherkin dialect table (80 languages, generated) |
+| `src/test/unit/`, `src/test/integration/`  | Vitest and `@vscode/test-electron` suites               |
+| `zed/`                                     | Zed extension, Rust shim and the LSP server source      |
+| `syntaxes/`, `language-configuration.json` | `.feature` grammar and editor behaviour                 |
+| `esbuild.js`, `esbuild-zed.js`, `test/`    | Bundlers and the integration-test launcher              |
 
 ## Before opening a pull request
 
