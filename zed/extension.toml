@@ -1,6 +1,6 @@
 id = "flutter-bdd"
 name = "Flutter BDD"
-version = "0.2.2"
+version = "0.3.0"
 schema_version = 1
 authors = ["Emre Sırmalı <lynicis@protonmail.com>"]
 description = "Flutter BDD support for bdd_widget_test: go-to-definition, unresolved-step diagnostics, and step-file scaffolding for Gherkin .feature files"

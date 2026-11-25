@@ -2,7 +2,7 @@
   "name": "bdd-widget-test-helper",
   "displayName": "Flutter BDD",
   "description": "Editor integration for bdd_widget_test: Ctrl+Click a Gherkin step to its Dart step function, or scaffold the missing file — VS Code, VSCodium and Zed, offline.",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "publisher": "lynicis",
   "license": "MIT",
   "icon": "media/icon.png",
