@@ -8,6 +8,7 @@ runtime.
 
 - Use **bun** (`bun install`); the lockfile is `bun.lock`. Do not add runtime
   dependencies — `dependencies` stays empty.
+- Toolchain pinned in `package.json` engines and CI: Node 26, bun 1.4.
 
 ## Commands
 
@@ -21,8 +22,10 @@ runtime.
 | Compile         | `bun run compile`                        |
 | Rebuild Zed LSP | `bun run build:zed`                      |
 
-CI (`.github/workflows/publish.yml`) runs compile, test compile, vitest and the
-integration suite, then publishes on a GitHub release. It does not run lint.
+CI (`.github/workflows/ci.yml`) runs `bun run compile`, `bun run build:zed`
+(failing if `zed/server/server.cjs` is stale), `bunx vitest run`, and the
+integration suite under `xvfb`. It does not run lint. `publish.yml` only
+publishes on a GitHub release.
 
 ## Key Conventions
 
@@ -38,6 +41,8 @@ integration suite, then publishes on a GitHub release. It does not run lint.
 - Option precedence is `bdd_options.yaml` → `build.yaml` → editor settings
   (`bddWidgetTestHelper.*`); keep it consistent in both hosts.
 - Only open-source `vscode` APIs (VSCodium support); desktop host only.
+- `esbuild-zed.js` omits `external: ['vscode']` on purpose: a `vscode` import
+  reaching the core makes `bun run build:zed` fail.
 - Sync `fs` I/O in the core; only `createStepFile` is async.
 - Integration tests hardcode the extension id `lynicis.bdd-widget-test-helper`
   (keep it equal to `package.json`) and use `src/test/fixtures` as the
