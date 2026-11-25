@@ -1,7 +1,7 @@
 {
   "name": "bdd-widget-test-helper",
   "displayName": "Flutter BDD",
-  "description": "Flutter BDD tools for VS Code, VSCodium and Zed (bdd_widget_test): Go-to-Definition, step scaffolding, and unresolved-step diagnostics for Gherkin .feature files — offline, all 80 dialects.",
+  "description": "Editor integration for bdd_widget_test: Ctrl+Click a Gherkin step to its Dart step function, or scaffold the missing file — VS Code, VSCodium and Zed, offline.",
   "version": "0.2.2",
   "publisher": "lynicis",
   "license": "MIT",
@@ -124,7 +124,7 @@
     "@eslint/json": "^2.1.1",
     "@eslint/markdown": "^9.0.0",
     "@types/node": "26.6.7",
-    "@types/vscode": "1.146.0",
+    "@types/vscode": "1.85.0",
     "@vscode/test-electron": "^3.1.0",
     "@vscode/vsce": "^4.1.1",
     "esbuild": "^0.28.2",
