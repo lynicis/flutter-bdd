@@ -10,7 +10,7 @@ not maintained; please update the extension before reporting.
 **Do not open a public issue for a security problem.**
 
 - Preferred: use GitHub's private reporting —
-  <https://github.com/lynicis/bdd-widget-test-helper/security/advisories/new>
+  <https://github.com/lynicis/flutter-bdd/security/advisories/new>
 - Or email <lynicis@protonmail.com> with `SECURITY` in the subject.
 
 Please include:

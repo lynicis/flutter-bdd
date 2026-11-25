@@ -99,7 +99,7 @@ test skips itself.
 
 ## Reporting bugs and requesting features
 
-Open an issue at <https://github.com/lynicis/bdd-widget-test-helper/issues>.
+Open an issue at <https://github.com/lynicis/flutter-bdd/issues>.
 Include your editor and version, the `bdd_widget_test` version your project
 uses, and a minimal `.feature` + `step/*.dart` reproduction where possible.
 For anything security-related, follow [SECURITY.md](SECURITY.md) instead.

@@ -1,6 +1,6 @@
 # Flutter BDD
 
-[![CI](https://github.com/lynicis/bdd-widget-test-helper/actions/workflows/ci.yml/badge.svg)](https://github.com/lynicis/bdd-widget-test-helper/actions/workflows/ci.yml)
+[![CI](https://github.com/lynicis/flutter-bdd/actions/workflows/ci.yml/badge.svg)](https://github.com/lynicis/flutter-bdd/actions/workflows/ci.yml)
 [![Visual Studio Marketplace Version](https://vsmarketplacebadges.dev/version/lynicis.bdd-widget-test-helper.svg)](https://marketplace.visualstudio.com/items?itemName=lynicis.bdd-widget-test-helper)
 ![Open VSX Version](https://img.shields.io/open-vsx/v/lynicis/bdd-widget-test-helper)
 
@@ -17,7 +17,7 @@ TypeScript. No generator run, no analyzer, no network.
 Status: **0.2.x, pre-1.0, actively maintained.** Published to the VS Code
 Marketplace and Open VSX; the Zed extension is installed from `zed/` as a dev
 extension. [Issues and pull
-requests](https://github.com/lynicis/bdd-widget-test-helper/issues) are welcome.
+requests](https://github.com/lynicis/flutter-bdd/issues) are welcome.
 
 > This resolves **`bdd_widget_test` naming only**. Projects using a different
 > step generator or runner (`flutter_gherkin`, custom step folders with their
