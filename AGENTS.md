@@ -9,6 +9,8 @@ runtime.
 - Use **bun** (`bun install`); the lockfile is `bun.lock`. Do not add runtime
   dependencies — `dependencies` stays empty.
 - Toolchain pinned in `package.json` engines and CI: Node 26, bun 1.4.
+- TypeScript stays on 6.0.x: `typescript-eslint@8` rejects TS 7 (`bun run lint`
+  fails at config load). Bump both together.
 
 ## Commands
 

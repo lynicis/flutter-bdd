@@ -19,8 +19,9 @@ and this project adheres to
 - Development commands and the project layout moved to `CONTRIBUTING.md`
 
 ### Fixed
-- `bun run package:vsix` and the release publish aborted because
+- `bun run lint` failed at config load because `typescript-eslint` 8 does not support TypeScript 7; pinned TypeScript to `^6.0.3`. `vitest.config.ts` became `vitest.config.mts` to satisfy Vite's native config loader.
 - `bun run package:vsix` and the release publish aborted because `@types/vscode` (1.146.0) was newer than `engines.vscode` (`^1.85.0`); pinned the types to the supported floor
+- `bun run lint` failed at config load because `typescript-eslint` 8 does not support TypeScript 7; pinned TypeScript to `^6.0.3` and renamed `vitest.config.ts` to `vitest.config.mts` for Vite's native config loader
 ## 0.2.2 - 2026-11-14
 
 ### Fixed
