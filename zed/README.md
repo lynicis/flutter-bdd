@@ -2,7 +2,7 @@
 
 Zed extension for Flutter developers practicing A-TDD with the
 [`bdd_widget_test`](https://pub.dev/packages/bdd_widget_test) package: it brings
-the VS Code helper's features to `.feature` files opened in Zed, using the same
+the VS Code extension's features to `.feature` files opened in Zed, using the same
 TypeScript core under `src/` (so the `bdd_widget_test` naming/resolution
 contract stays single-sourced).
 
@@ -12,14 +12,14 @@ bundled Node.js — nothing to install.
 
 ## Features
 
-| Feature                                                | VS Code helper | Zed extension                                                                                                                      |
-| ------------------------------------------------------ | -------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Unresolved-step diagnostics                            | ✅             | ✅                                                                                                                                 |
-| Go to definition (step → step `.dart` + function line) | ✅             | ✅                                                                                                                                 |
-| "Create step file" quick-fix (scaffolds the file)      | ✅             | ✅                                                                                                                                 |
-| Document links on steps                                | ✅             | ❌ Zed has no document-link support ([zed#33587](https://github.com/zed-industries/zed/issues/33587)) — go-to-definition covers it |
-| Syntax highlighting / outline / folds / indents        | ✅ (TextMate)  | ✅ (tree-sitter grammar + queries)                                                                                                 |
-| "Rebuild step index" command                           | ✅             | n/a (the index is rebuilt on open/save)                                                                                            |
+| Feature                                                | VS Code extension | Zed extension                                                                                                                      |
+| ------------------------------------------------------ | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Unresolved-step diagnostics                            | ✅                | ✅                                                                                                                                 |
+| Go to definition (step → step `.dart` + function line) | ✅                | ✅                                                                                                                                 |
+| "Create step file" quick-fix (scaffolds the file)      | ✅                | ✅                                                                                                                                 |
+| Document links on steps                                | ✅                | ❌ Zed has no document-link support ([zed#33587](https://github.com/zed-industries/zed/issues/33587)) — go-to-definition covers it |
+| Syntax highlighting / outline / folds / indents        | ✅ (TextMate)     | ✅ (tree-sitter grammar + queries)                                                                                                 |
+| "Rebuild step index" command                           | ✅                | n/a (the index is rebuilt on open/save)                                                                                            |
 
 ## Install
 
@@ -75,7 +75,7 @@ To use a custom binary instead of the embedded server:
 ```
 
 `bdd_options.yaml` / `build.yaml` options still take precedence over these
-settings, exactly as in the VS Code helper.
+settings, exactly as in the VS Code extension.
 
 ## Build
 
